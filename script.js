@@ -1,3 +1,4 @@
+// Adding comments
 let faceapi;
 let video;
 let detections;
@@ -21,7 +22,7 @@ function setup() {
 }
 
 function modelReady() {
-    console.log('ready!')
+    console.log('Ready!')
     console.log(faceapi)
     faceapi.detect(gotResults)
 
