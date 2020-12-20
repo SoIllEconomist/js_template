@@ -16,7 +16,7 @@ function setup() {
     // load up your video
     video = createCapture(VIDEO);
     video.size(width, height);
-    // video.hide(); // Hide the video element, and just show the canvas
+    video.hide(); // Hide the video element, and just show the canvas
     faceapi = ml5.faceApi(video, detection_options, modelReady)
     textAlign(RIGHT);
 }
@@ -59,8 +59,8 @@ function drawBox(detections){
         const boxHeight  = alignedRect._box._height
         
         noFill();
-        stroke(161, 95, 251);
-        strokeWeight(2);
+        stroke(19, 252, 3);
+        strokeWeight(1);
         rect(x, y, boxWidth, boxHeight);
     }
     
@@ -68,7 +68,7 @@ function drawBox(detections){
 
 function drawLandmarks(detections){
     noFill();
-    stroke(161, 95, 251)
+    stroke(19, 252, 3)
     strokeWeight(2)
 
     for(let i = 0; i < detections.length; i++){
